@@ -23,15 +23,19 @@ install-packages:
 
 install-bspwm:
 	mkdir -p ~/.config/bspwm
+	rm -f ~/.config/bspwm/bspwmrc
 	ln -s `pwd`/config/bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 	chmod +x ~/.config/bspwm/bspwmrc
 
 install-sxhkdrc:
 	mkdir -p ~/.config/sxhkd
+	rm -f ~/.config/sxhkd/sxhkdrc
 	ln -s `pwd`/config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 
 install-polybar:
 	mkdir -p ~/.config/polybar
+	rm -f ~/.config/polybar/config
+	rm -f ~/.config/polybar/launch.sh
 	ln -s `pwd`/config/polybar/launch.sh ~/.config/polybar/launch.sh
 	ln -s `pwd`/config/polybar/config ~/.config/polybar/config
 	chmod +x ~/.config/polybar/launch.sh
