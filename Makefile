@@ -10,7 +10,6 @@ update:
 
 install:
 	sudo apt-get install -y $(PACKAGES)
-	install-fonts
 	install-bspwm
 	install-sxhkdrc
 	install-polybar
