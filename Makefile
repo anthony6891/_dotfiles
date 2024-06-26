@@ -10,17 +10,16 @@ update:
 
 install:
 	sudo apt-get install -y $(PACKAGES)\
-	install-bspwm
-	install-sxhkdrc
-
-clean:
-	sudo apt-get autoremove -y
-	sudo apt-get clean
 	install-fonts
 	install-bspwm
 	install-sxhkdrc
 	install-polybar
 	install-xinitrc
+
+clean:
+	sudo apt-get autoremove -y
+	sudo apt-get clean
+
 
 full: update install clean
 
