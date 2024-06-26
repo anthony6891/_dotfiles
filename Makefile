@@ -8,9 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm\ 
-        install-sxhkdrc install-polybar install-xinitrc\ 
-		install-kitty
+install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-xinitrc install-kitty
 
 clean:
 	sudo apt-get autoremove -y
