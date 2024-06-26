@@ -8,7 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-xinitrc install-kitty
+install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty
 
 clean:
 	sudo apt-get autoremove -y
@@ -40,10 +40,9 @@ install-polybar:
 	ln -s `pwd`/config/polybar/config ~/.config/polybar/config
 	chmod +x ~/.config/polybar/launch.sh
 
-install-xinitrc:
-	ln -s `pwd`/config/xinitrc ~/.xinitrc
-	chmod +x ~/.xinitrc
-	startx
+install-Xsession:
+	rm -f ~/.xsession
+	ln -s `pwd`/config/Xsession ~/.xsession
 
 install-fonts:
 	mkdir -p ~/.fonts
