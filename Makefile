@@ -8,7 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install: install-packages install-bspwm
+install: install-packages install-bspwm
 
 clean:
 	sudo apt-get autoremove -y
