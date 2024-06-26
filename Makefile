@@ -9,7 +9,6 @@ update:
 	sudo apt-get update
 
 install:
-	sudo apt-get install -y $(PACKAGES)
 	install-bspwm
 	install-sxhkdrc
 	install-polybar
