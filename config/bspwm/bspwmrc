@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Terminate already running instances of bspwm
+pkill -x bspwm
+
+# Set the background
+#feh --bg-scale ~/path/to/your/wallpaper.jpg
+
+# Start polybar
+~/.config/polybar/launch.sh &
+
+# Window border settings
+bspc config border_width 2
+bspc config window_gap 10
+
+# Monitor settings
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# Other bspwm settings
+bspc config split_ratio         0.52
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true

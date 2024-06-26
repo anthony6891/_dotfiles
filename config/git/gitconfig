@@ -1,0 +1,16 @@
+[user]
+    name = Anthony Solorzano Lopez
+    email = anthony06891@gmail.com
+[color]
+    ui = auto
+[push]
+    default = simple
+[github]
+    user = anthony06891
+[credential]
+	helper = store
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

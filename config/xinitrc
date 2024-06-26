@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Start sxhkd
+sxhkd &
+
+# Start bspwm
+exec bspwm

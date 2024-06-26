@@ -1,0 +1,19 @@
+# Set keybindings for bspwm
+super + Return
+    st
+
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
+
+super + shift + {h,j,k,l}
+    bspc node -s {west,south,north,east}
+
+super + {1-9}
+    bspc desktop -f ^{1-9}
+
+super + shift + {1-9}
+    bspc node -d ^{1-9}
+
+# Other keybindings
+super + Escape
+    bspc node -c
