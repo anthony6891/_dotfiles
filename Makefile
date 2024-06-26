@@ -9,7 +9,7 @@ update:
 	sudo apt-get update
 
 install:
-	sudo apt-get install -y $(PACKAGES)\ 
+	sudo apt-get install -y $(PACKAGES)
 	install-fonts
 	install-bspwm
 	install-sxhkdrc
