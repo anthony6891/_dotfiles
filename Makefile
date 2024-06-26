@@ -8,11 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install:
-	install-bspwm
-	install-sxhkdrc
-	install-polybar
-	install-xinitrc
+install: install: install-packages install-bspwm
 
 clean:
 	sudo apt-get autoremove -y
@@ -20,6 +16,10 @@ clean:
 
 
 full: update install clean
+
+
+install-packages:
+	sudo apt-get install -y $(PACKAGES)
 
 install-bspwm:
 	mkdir -p ~/.config/bspwm
