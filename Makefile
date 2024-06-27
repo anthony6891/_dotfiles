@@ -9,16 +9,16 @@ update:
 	sudo apt-get update
 
 install:
-	install-packages \
-	install-fonts \
-	install-bspwm \
-	install-sxhkdrc \
-	install-polybar \
-	install-Xsession \
-	install-kitty \
-	install-rofi \
-	install-tmux \
-	install-desktop \
+	install-packages && \
+	install-fonts && \
+	install-bspwm && \
+	install-sxhkdrc && \
+	install-polybar && \
+	install-Xsession && \
+	install-kitty && \
+	install-rofi && \
+	install-tmux && \
+	install-desktop && \
 	install-vscode
 
 clean:
