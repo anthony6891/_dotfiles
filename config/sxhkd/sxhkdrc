@@ -32,3 +32,10 @@ super + shift + q
 # show rofi
 super + d
     rofi -show drun
+
+# ScreenShots
+@Print
+	flameshot full
+
+ctrl + @Print
+	flameshot gui

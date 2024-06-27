@@ -8,7 +8,18 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi install-tmux install-desktop
+install:
+	install-packages
+	install-fonts
+	install-bspwm
+	install-sxhkdrc
+	install-polybar
+	install-Xsession
+	install-kitty
+	install-rofi
+	install-tmux
+	install-desktop
+	install-vscode
 
 clean:
 	sudo apt-get autoremove -y
@@ -75,3 +86,12 @@ install-desktop:
 	mkdir -p ~/.local/share/applications
 	rm -f ~/.local/share/applications/mimeinfo.cache
 	ln -s `pwd`/config/mime/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache
+
+install-vscode:
+	mkdir -p ~/.config/vscode/
+	rm -f ~/.config/vscode/instalar_vscode.sh
+	rm -f ~/.config/Code/User/settings.json
+	ln -s `pwd`/config/vscode/instalar_vscode.sh ~/.config/vscode/instalar_vscode.sh
+	chmod +x ~/.config/vscode/instalar_vscode.sh
+	sh ~/.config/vscode/instalar_vscode.sh
+	ln -s `pwd`/config/vscode/settings.json ~/.config/Code/User/settings.json

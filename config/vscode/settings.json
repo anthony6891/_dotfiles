@@ -1,0 +1,76 @@
+{
+    "folders": [
+        {
+            "path": "path/to/your/project1"
+        },
+        {
+            "path": "path/to/your/project2"
+        }
+    ],
+    "settings": {
+        "editor.fontSize": 16,
+        "editor.tabSize": 2,
+        "editor.wordWrap": "off",
+        "files.autoSave": "onFocusChange",
+        "workbench.colorTheme": "Nord",
+        "terminal.integrated.fontSize": 12,
+        "terminal.integrated.localEchoExcludePrograms": [
+            "vim",
+            "vi",
+            "nano",
+            "tmux",
+            "kitty"
+        ],
+        "terminal.integrated.profiles.linux": {
+            "kitty": {
+                "path": "/usr/bin/kitty",
+                "args": ["-l"]
+            },
+            "zsh": {
+                "path": "/usr/bin/zsh",
+                "args": ["-l"]
+            },
+            "bash": {
+                "path": "/bin/bash",
+                "args": ["-l"]
+            },
+            "fish": {
+                "path": "/usr/bin/fish",
+                "args": ["-l"]
+            }
+        },
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "codeium.enableConfig": {
+        "*": false
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "dbaeumer.vscode-eslint",
+            "redhat.vscode-yaml",
+            "postman.postman-for-vscode",
+            "oderwat.indent-rainbow",
+            "ms-vscode.makefile-tools",
+            "christian-kohler.path-intellisense",
+            "terminal.integrated.python.defaultInterpreterPath",
+            "run-at-scale.terraform-doc-snippets",
+            "tfsec.tfsec",
+            "Tim-Koehler.helm-intellisense",
+            "eamodio.gitlens",
+            "pythonfastapisnippet.python-fastapi-snippets",
+            "henriiik.docker-linter",
+            "kejun.devtoys",
+            "streetsidesoftware.code-spell-checker",
+            "ms-azuretools.vscode-docker",
+            "GrapeCity.gc-excelviewer",
+            "mhutchie.git-graph",
+            "formulahendry.github-actions",
+            "me-dutour-mathieu.vscode-github-actions",
+            "Nord.nord",
+            "KevinRose.vsc-python-indent",
+            "mechatroner.rainbow-csv"
+        ]
+    }
+}

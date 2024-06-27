@@ -22,3 +22,5 @@ cmake
 rofi
 tmux
 arandr
+flameshot
+gpg
