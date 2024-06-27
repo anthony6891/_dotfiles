@@ -54,3 +54,8 @@ install-kitty:
 	mkdir -p ~/.config/kitty
 	rm -f ~/.config/kitty/kitty.conf
 	ln -s `pwd`/config/kitty/kitty.conf ~/.config/kitty/kitty.conf
+
+install-rofi:
+	mkdir -p ~/.config/rofi
+	rm -f ~/.config/rofi/config.rasi
+	ln -s `pwd`/config/rofi/config.rasi ~/.config/rofi/config.rasi

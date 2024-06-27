@@ -1,0 +1,22 @@
+configuration {
+  modi: "drun,run";
+  font: "mono 10";
+  theme: "default";
+  kb-cancel: "Escape, Alt+F4";
+  kb-accept-entry: "Return, KP_Enter";
+  kb-row-up: "Up, Shift+Tab";
+  kb-row-down: "Down, Tab";
+  width: 50;
+  lines: 10;
+  location: 0;
+}
+
+* {
+  background-color: #222222;
+  text-color: #ffffff;
+  border-color: #444444;
+  separator-color: #888888;
+  margin: 0;
+  padding: 1;
+  border-radius: 5px;
+}
