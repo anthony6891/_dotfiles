@@ -14,3 +14,8 @@ rofi
 feh
 zsh
 kitty
+pulseaudio
+picom
+pavucontrol
+jq
+cmake
