@@ -1,6 +1,6 @@
 # Set keybindings for bspwm
 super + Return
-    st
+    kitty
 
 super + {h,j,k,l}
     bspc node -f {west,south,north,east}
