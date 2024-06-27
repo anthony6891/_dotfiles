@@ -19,7 +19,7 @@ install:
 	install-rofi \
 	install-tmux \
 	install-desktop \
-	install-vscode \
+	install-vscode
 
 clean:
 	sudo apt-get autoremove -y
