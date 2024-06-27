@@ -8,7 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty
+install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi
 
 clean:
 	sudo apt-get autoremove -y
