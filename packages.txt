@@ -12,3 +12,4 @@ polybar
 sxhkd
 rofi
 feh
+zsh
