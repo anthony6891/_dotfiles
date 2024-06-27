@@ -30,5 +30,5 @@ super + shift + q
 	bspc node -c
 
 # show rofi
-super + space
+super + d
     rofi -show drun
