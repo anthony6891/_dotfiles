@@ -13,3 +13,4 @@ sxhkd
 rofi
 feh
 zsh
+kitty
