@@ -8,7 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi
+install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi install-tmux
 
 clean:
 	sudo apt-get autoremove -y
@@ -61,3 +61,11 @@ install-rofi:
 	rm -f ~/.config/rofi/arc_dark_transparent_colors.rasi
 	rm -f ~/.config/rofi/arc_dark_colors.rasi
 	ln -s `pwd`/config/rofi/config.rasi ~/.config/rofi/config.rasi
+
+install-tmux:
+	rm -f ~/.tmux.conf
+	rm -f ~/.tmux-colors
+	ln -s `pwd`/config/tmux/tmux-colors ~/.tmux-colors
+	ln -s `pwd`/config/tmux/tmux.conf ~/.tmux.conf
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	git clone https://github.com/tmux-plugins/tmux-yank ~/.config/tmux-yank
