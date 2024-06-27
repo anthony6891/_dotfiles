@@ -17,3 +17,12 @@ super + shift + {1-9}
 # Other keybindings
 super + Escape
     bspc node -c
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
