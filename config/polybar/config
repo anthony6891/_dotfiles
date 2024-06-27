@@ -1,35 +1,50 @@
-[bar/mybar]
+[bar/topbar]
 width = 100%
-height = 24
-background = #222222
-foreground = #ffffff
-font-0 = "Inconsolata:pixelsize=12;3"
+height = 19
+radius = 0
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+#include-file = $HOME/.config/polybar/fonts.ini
+#include-file = $HOME/.config/polybar/modules.ini
+line-size = 3
+line-color = #f00
+border-size = 0
+border-color = #000000
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 2
+tray-position = right
+tray-padding = 2
+enable-ipc = true
+wm-restack = bspwm
+cursor-click = pointer
+cursor-scroll = ns-resize
 
-modules-left = bspwm
-modules-center = date
-modules-right = pulseaudio
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+; vim:ft=dosini
 
 [module/bspwm]
 type = internal/bspwm
-label-focused = %name%
 
-[module/date]
-type = internal/date
-date = %Y-%m-%d %H:%M:%S
-interval = 1
+format = <label-state> <label-mode>
 
-[module/cpu]
-type = internal/cpu
-interval = 1
+label-focused = %{T7}%{T-}
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.background}
+label-focused-padding = 2
 
-format = <label>
-format-padding = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.fg}
-label = %{T1} %percentage:2%%%{T-}
-label-foreground = ${colors.fg}
+label-occupied = %{T7}%{T-}
+label-occupied-padding = 2
 
-[module/pulseaudio]
-type = internal/pulseaudio
-format-volume = <label-volume> <ramp-volume>
-label-volume = Volume: %percentage%%
+label-urgent = %{T7}%{T-}
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = 
