@@ -21,3 +21,4 @@ jq
 cmake
 rofi
 tmux
+arandr

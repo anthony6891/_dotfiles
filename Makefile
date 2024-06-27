@@ -8,7 +8,7 @@ all: update install
 update:
 	sudo apt-get update
 
-install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi install-tmux
+install: install-packages install-fonts install-bspwm install-sxhkdrc install-polybar install-Xsession install-kitty install-rofi install-tmux install-desktop
 
 clean:
 	sudo apt-get autoremove -y
@@ -69,3 +69,11 @@ install-tmux:
 	ln -s `pwd`/config/tmux/tmux.conf ~/.tmux.conf
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	git clone https://github.com/tmux-plugins/tmux-yank ~/.config/tmux-yank
+
+install-desktop:
+	mkdir -p ~/.config/desktop/
+	rm -f ~/.config/desktop/background.jpg
+	ln -s `pwd`/images/eva01.jpg ~/.config/desktop/background.jpg
+	mkdir -p ~/.local/share/applications
+	rm -f ~/.local/share/applications/mimeinfo.cache
+	ln -s `pwd`/config/mime/mimeinfo.cache ~/.local/share/applications/mimeinfo.cache
