@@ -34,10 +34,10 @@ install-sxhkdrc:
 
 install-polybar:
 	mkdir -p ~/.config/polybar
-	rm -f ~/.config/polybar/config.ini
+	rm -f ~/.config/polybar/config
 	rm -f ~/.config/polybar/launch.sh
 	ln -s `pwd`/config/polybar/launch.sh ~/.config/polybar/launch.sh
-	ln -s `pwd`/config/polybar/config.ini ~/.config/polybar/config.ini
+	ln -s `pwd`/config/polybar/config ~/.config/polybar/config
 	chmod +x ~/.config/polybar/launch.sh
 
 install-Xsession:
