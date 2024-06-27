@@ -18,18 +18,17 @@ super + {1-9}
 super + shift + {1-9}
     bspc node -d ^{1-9}
 
-# Other keybindings
-super + Escape
-    bspc node -c
 
-#
-# bspwm hotkeys
-#
+### WM INDEPENDENT HOTKEYS ###
 
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
-# close
+# close a window
 super + shift + q
 	bspc node -c
+
+# show rofi
+super + space
+    rofi -show drun
