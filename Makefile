@@ -61,5 +61,3 @@ install-rofi:
 	rm -f ~/.config/rofi/arc_dark_transparent_colors.rasi
 	rm -f ~/.config/rofi/arc_dark_colors.rasi
 	ln -s `pwd`/config/rofi/config.rasi ~/.config/rofi/config.rasi
-	ln -s `pwd`/config/rofi/arc_dark_transparent_colors.rasi ~/.config/rofi/arc_dark_transparent_colors.rasi
-	ln -s `pwd`/config/rofi/arc_dark_colors.rasi ~/.config/rofi/arc_dark_colors.rasi

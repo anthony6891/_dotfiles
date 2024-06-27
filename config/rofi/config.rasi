@@ -1,137 +1,165 @@
-//- file:rofi/config.rasi
-/*******************************************************
- * ROFI configs i3 Apps menu for EndeavourOS
- * Maintainer: joekamprad <joekamprad@endeavouros.com>
- *******************************************************/
+/* global settings and color variables */
+* {
+  white:            #cccccc;
+  black:            #000000;
+  blue:             #a6e1ff;
+  darkblue:         #B48EAD;
+  cyan:             #95e6cb;
+  lightcyan:        #11d1a1;
+  green:            #33bd91;
+  red:              #ff6666;
 
-configuration {
-    font:				"Cascadia Code 12";
-    show-icons:				true;
-    icon-theme:				"Arc-X-D";
-    display-drun:			"Apps";
-    drun-display-format:		"{name}";
-    scroll-method:			0;
-    disable-history:			false;
-    sidebar-mode:			false;
+  dark1:            #00000033;
+  dark2:            #00000000;
+
+  accent:           #C0A0FF;
+
+  background-color: @dark2;
+  background-alt:   @dark1;
+  border-color:     @dark2;
+  text-color:       @white;
+  dark-text-color:  @black;
+  main-color:       @white;
+  highlight:        @accent;
+  urgent-color:     @red;
+  selected-color:   @accent;
 }
-
-@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
 
 window {
-    background-color: @background;
-    border:           0;
-    padding:          30;
+  background-color: @background-alt;
+  width:            50%;
+  height:           75%;
+  fullscreen:       false;
+  border:           none;
+  border-radius:    0 0 7.5px 7.5px;
+  padding:          0 0 10px 0;
+  border-color:     @border-color;
 }
-listview {
-    lines:                          10;
-    columns:                        3;
-}
+
 mainbox {
-    border:  0;
-    padding: 0;
+  background-color: @background-color;
+  spacing:          0px;
 }
+
 message {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
-    padding:      1px ;
+  background-color: @background-color;
 }
+
 textbox {
-    text-color: @foreground;
+  text-color:       @text-color;
+  background-color: @background-color;
 }
+
 listview {
-    fixed-height: 0;
-    border:       8px 0px 0px ;
-    border-color: @separatorcolor;
-    spacing:      8px ;
-    scrollbar:    false;
-    padding:      2px 0px 0px ;
+  fixed-height:     true;
+  dynamic:          true;
+  scrollbar:        false;
+  spacing:          5px;
+  padding:          1px 0px 0px 0px;
+  margin:           0px 0px 1px 0px;
+  background:       @background-color;
+  text-color:       @text-color;
 }
+
 element {
-    border:  0;
-    padding: 1px ;
+  border-radius:    3px;
+  padding:          10px;
+  margin:           5px 7.5px 0 7.5px;
 }
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
+
+element normal.normal {
+  padding:          0px 15px;
+  background-color: @background-color;
+  text-color:       @text-color;
 }
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+
+element normal.urgent {
+  background-color: @background-color;
+  text-color:       @urgent-color;
 }
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+
+element normal.active {
+  background-color: @background-color;
+  text-color:       @main-color;
 }
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+
+element selected.normal {
+  background-color: @selected-color;
+  text-color:       @black;
 }
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+
+element selected.urgent {
+  background-color: @urgent-color;
+  text-color:       @dark-text-color;
 }
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
+
+element selected.active {
+  background-color: @selected-color;
+  text-color:       @black;
 }
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
+
+element alternate.normal {
+  background-color: @background-color;
+  text-color:       @text-color;
 }
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+
+element alternate.urgent {
+  background-color: @background-color;
+  text-color:       @urgent-color;
 }
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+
+element alternate.active {
+  background-color: @background-color;
+  text-color:       @main-color;
 }
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
+
 scrollbar {
-    width:        4px ;
-    border:       0;
-    handle-color: @normal-foreground;
-    handle-width: 8px ;
-    padding:      0;
+  background-color: @background-color;
+  handle-color:     @background-color;
+  handle-width:     0px;
 }
+
 mode-switcher {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
+  background-color: @background-color;
 }
+
 button {
-    spacing:    0;
-    text-color: @normal-foreground;
+  background-color: @background-color;
+  text-color:       @text-color;
 }
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+
+button selected {
+  text-color:       @main-color;
 }
+
 inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px ;
+  background-color: @background-color;
+  spacing:          0px;
+  children:         [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
-case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-entry {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
+
 prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
+  padding:          15px;
+  background-color: @background-alt;
+  text-color:       @highlight;
 }
-inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+
+entry {
+  padding:          15px;
+  background-color: @background-alt;
+  text-color:       @text-color;
 }
-textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @normal-foreground;
+
+case-indicator {
+  padding:          15px;
+  text-color:       @main-color;
+  background-color: @background-alt;
+}
+
+#textbox-prompt-colon {
+    padding:          15px;
+  expand:           false;
+  str:              "->";
+  text-color:       @highlight;
+  background-color: @background-alt;
 }
