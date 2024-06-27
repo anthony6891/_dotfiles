@@ -18,6 +18,17 @@ type = internal/date
 date = %Y-%m-%d %H:%M:%S
 interval = 1
 
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+format = <label>
+format-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.fg}
+label = %{T1} %percentage:2%%%{T-}
+label-foreground = ${colors.fg}
+
 [module/pulseaudio]
 type = internal/pulseaudio
 format-volume = <label-volume> <ramp-volume>
