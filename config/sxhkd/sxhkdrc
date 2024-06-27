@@ -30,3 +30,6 @@ super + Escape
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
+# close
+alt + shift + q
+	bspc node -c
