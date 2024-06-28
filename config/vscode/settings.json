@@ -36,8 +36,10 @@
         "terminal.integrated.defaultProfile.linux": "zsh",
         "python.defaultInterpreterPath": "/usr/bin/python3",
         "codeium.enableConfig": {
-        "*": false
-        }
+            "*": false
+        },
+        "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+        "editor.fontLigatures": true
     },
     "extensions": {
         "recommendations": [
