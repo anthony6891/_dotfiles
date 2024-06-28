@@ -96,5 +96,5 @@ install-vscode:
 	chmod +x ~/.config/vscode/install_vscode.sh
 	chmod +x ~/.config/vscode/install_extensions.sh
 	sh ~/.config/vscode/install_vscode.sh
-	sh ~/.config/vscode/install_extensions.sh
 	ln -s `pwd`/config/vscode/settings.json ~/.config/Code/User/settings.json
+	sh ~/.config/vscode/install_extensions.sh
