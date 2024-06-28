@@ -98,3 +98,9 @@ install-vscode:
 	sh ~/.config/vscode/install_vscode.sh
 	ln -s `pwd`/config/vscode/settings.json ~/.config/Code/User/settings.json
 	sh ~/.config/vscode/install_extensions.sh
+
+config-screenlayout:
+	mkdir -p ~/.config/screenlayout
+	rm -f ~/.config/screenlayout/test_virtualbox.sh
+	ln -s `pwd`/config/screenlayout/test_virtualbox.sh ~/.screenlayout/test_virtualbox.sh
+	chmod +x ~/.config/screenlayout/test_virtualbox.sh
