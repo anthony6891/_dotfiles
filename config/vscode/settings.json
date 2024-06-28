@@ -1,11 +1,5 @@
 {
     "folders": [
-        {
-            "path": "path/to/your/project1"
-        },
-        {
-            "path": "path/to/your/project2"
-        }
     ],
     "settings": {
         "editor.fontSize": 16,

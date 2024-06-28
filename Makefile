@@ -88,9 +88,13 @@ install-desktop:
 
 install-vscode:
 	mkdir -p ~/.config/vscode/
-	rm -f ~/.config/vscode/instalar_vscode.sh
+	rm -f ~/.config/vscode/install_vscode.sh
+	rm -f ~/.config/vscode/install_extensions.sh
 	rm -f ~/.config/Code/User/settings.json
-	ln -s `pwd`/config/vscode/instalar_vscode.sh ~/.config/vscode/instalar_vscode.sh
-	chmod +x ~/.config/vscode/instalar_vscode.sh
-	sh ~/.config/vscode/instalar_vscode.sh
+	ln -s `pwd`/config/vscode/install_vscode.sh ~/.config/vscode/install_vscode.sh
+	ln -s `pwd`/config/vscode/install_extensions.sh ~/.config/vscode/install_extensions.sh
+	chmod +x ~/.config/vscode/install_vscode.sh
+	chmod +x ~/.config/vscode/install_extensions.sh
+	sh ~/.config/vscode/install_vscode.sh
+	sh ~/.config/vscode/install_extensions.sh
 	ln -s `pwd`/config/vscode/settings.json ~/.config/Code/User/settings.json
